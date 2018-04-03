@@ -85,7 +85,7 @@ static struct drm_encoder *evdi_best_single_encoder(struct drm_connector
 	int enc_id = connector->encoder_ids[0];
 
 	return drm_encoder_find(connector->dev,
-#if KERNEL_VERSION(4, 15, 8) <= LINUX_VERSION_CODE
+#if KERNEL_VERSION(4, 15, 14) <= LINUX_VERSION_CODE
 				 NULL,
 #endif
 				 enc_id);
